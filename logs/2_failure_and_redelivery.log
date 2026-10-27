@@ -1,0 +1,19 @@
+18:44:13.193 [worker-1] waiting for messages on queue 'orders' (Ctrl+C to stop)
+18:44:15.180 [worker-2] waiting for messages on queue 'orders' (Ctrl+C to stop)
+18:44:17.181 [producer] published event_id=66f9bb2e-3aca-48a6-92b0-d3714ff55ae8 order_id=ORD-0001 item_id=ITEM-300 quantity=3
+18:44:17.181 [producer] published event_id=3ec453ea-47a5-47e3-8cbf-5ae9fd410640 order_id=ORD-0002 item_id=ITEM-200 quantity=1
+18:44:17.182 [producer] published event_id=cb38a550-92cb-47bb-b2ea-53c8dc5bd07c order_id=ORD-0003 item_id=ITEM-200 quantity=2
+18:44:17.182 [worker-1] received event_id=66f9bb2e-3aca-48a6-92b0-d3714ff55ae8 order_id=ORD-0001
+18:44:17.182 [worker-1] simulating crash: exiting WITHOUT sending ACK for order_id=ORD-0001
+18:44:17.185 [worker-2] received event_id=3ec453ea-47a5-47e3-8cbf-5ae9fd410640 order_id=ORD-0002
+18:44:17.185 [worker-2] processing order_id=ORD-0002 item_id=ITEM-200 quantity=1
+18:44:18.185 [worker-2] processed order_id=ORD-0002
+18:44:18.186 [worker-2] ACK sent for order_id=ORD-0002
+18:44:18.187 [worker-2] received (REDELIVERED) event_id=66f9bb2e-3aca-48a6-92b0-d3714ff55ae8 order_id=ORD-0001
+18:44:18.187 [worker-2] processing order_id=ORD-0001 item_id=ITEM-300 quantity=3
+18:44:19.187 [worker-2] processed order_id=ORD-0001
+18:44:19.187 [worker-2] ACK sent for order_id=ORD-0001
+18:44:19.188 [worker-2] received event_id=cb38a550-92cb-47bb-b2ea-53c8dc5bd07c order_id=ORD-0003
+18:44:19.188 [worker-2] processing order_id=ORD-0003 item_id=ITEM-200 quantity=2
+18:44:20.189 [worker-2] processed order_id=ORD-0003
+18:44:20.189 [worker-2] ACK sent for order_id=ORD-0003

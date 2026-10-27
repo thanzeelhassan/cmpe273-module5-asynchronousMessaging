@@ -1,0 +1,21 @@
+18:44:25.564 [worker-2] waiting for messages on queue 'orders' (Ctrl+C to stop)
+18:44:25.578 [worker-1] waiting for messages on queue 'orders' (Ctrl+C to stop)
+18:44:27.548 [producer] published event_id=aad47554-d4db-4e16-a275-a281a3e8b183 order_id=ORD-0001 item_id=ITEM-400 quantity=4
+18:44:27.549 [producer] published event_id=81845b1c-94cb-499c-b59c-d259ce27fd74 order_id=ORD-0002 item_id=ITEM-200 quantity=1
+18:44:27.549 [producer] published event_id=3381748c-2834-4daf-874f-b73dac7ad071 order_id=ORD-0003 item_id=ITEM-300 quantity=2
+18:44:27.549 [producer] published (DUPLICATE, same event_id) event_id=3381748c-2834-4daf-874f-b73dac7ad071 order_id=ORD-0003 item_id=ITEM-300 quantity=2
+18:44:27.551 [worker-2] received event_id=aad47554-d4db-4e16-a275-a281a3e8b183 order_id=ORD-0001
+18:44:27.551 [worker-2] processing order_id=ORD-0001 item_id=ITEM-400 quantity=4
+18:44:27.553 [worker-1] received event_id=81845b1c-94cb-499c-b59c-d259ce27fd74 order_id=ORD-0002
+18:44:28.551 [worker-2] processed order_id=ORD-0001
+18:44:28.552 [worker-2] ACK sent for order_id=ORD-0001
+18:44:28.552 [worker-1] processing order_id=ORD-0002 item_id=ITEM-200 quantity=1
+18:44:28.553 [worker-2] received event_id=3381748c-2834-4daf-874f-b73dac7ad071 order_id=ORD-0003
+18:44:29.552 [worker-1] processed order_id=ORD-0002
+18:44:29.553 [worker-1] ACK sent for order_id=ORD-0002
+18:44:29.553 [worker-2] processing order_id=ORD-0003 item_id=ITEM-300 quantity=2
+18:44:29.553 [worker-1] received event_id=3381748c-2834-4daf-874f-b73dac7ad071 order_id=ORD-0003
+18:44:30.553 [worker-2] processed order_id=ORD-0003
+18:44:30.553 [worker-2] ACK sent for order_id=ORD-0003
+18:44:30.553 [worker-1] DUPLICATE detected event_id=3381748c-2834-4daf-874f-b73dac7ad071 order_id=ORD-0003 -> skipping business action
+18:44:30.554 [worker-1] ACK sent for order_id=ORD-0003

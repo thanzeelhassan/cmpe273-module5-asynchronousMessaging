@@ -1,0 +1,32 @@
+18:44:00.819 [worker-2] waiting for messages on queue 'orders' (Ctrl+C to stop)
+18:44:00.828 [worker-1] waiting for messages on queue 'orders' (Ctrl+C to stop)
+18:44:02.866 [producer] published event_id=6c77a446-ccc8-4e91-b576-9673138f123f order_id=ORD-0001 item_id=ITEM-200 quantity=3
+18:44:02.867 [producer] published event_id=2bdb11e5-d7fe-4dd7-babd-45828b6832d3 order_id=ORD-0002 item_id=ITEM-300 quantity=2
+18:44:02.867 [producer] published event_id=ba6e6156-5f8b-40e3-b9e3-a52df67b138f order_id=ORD-0003 item_id=ITEM-400 quantity=5
+18:44:02.868 [producer] published event_id=68337be8-0b35-47ef-9238-a4a36a0be4fa order_id=ORD-0004 item_id=ITEM-400 quantity=4
+18:44:02.868 [producer] published event_id=4914726d-f560-4468-a195-c38d1e327e5a order_id=ORD-0005 item_id=ITEM-200 quantity=3
+18:44:02.868 [producer] published event_id=fb76d564-65be-42e4-b166-5918e748f768 order_id=ORD-0006 item_id=ITEM-100 quantity=1
+18:44:02.869 [worker-2] received event_id=6c77a446-ccc8-4e91-b576-9673138f123f order_id=ORD-0001
+18:44:02.869 [worker-1] received event_id=2bdb11e5-d7fe-4dd7-babd-45828b6832d3 order_id=ORD-0002
+18:44:02.870 [worker-1] processing order_id=ORD-0002 item_id=ITEM-300 quantity=2
+18:44:03.870 [worker-1] processed order_id=ORD-0002
+18:44:03.871 [worker-1] ACK sent for order_id=ORD-0002
+18:44:03.871 [worker-2] processing order_id=ORD-0001 item_id=ITEM-200 quantity=3
+18:44:03.872 [worker-1] received event_id=ba6e6156-5f8b-40e3-b9e3-a52df67b138f order_id=ORD-0003
+18:44:04.871 [worker-2] processed order_id=ORD-0001
+18:44:04.872 [worker-2] ACK sent for order_id=ORD-0001
+18:44:04.872 [worker-1] processing order_id=ORD-0003 item_id=ITEM-400 quantity=5
+18:44:04.873 [worker-2] received event_id=68337be8-0b35-47ef-9238-a4a36a0be4fa order_id=ORD-0004
+18:44:05.872 [worker-1] processed order_id=ORD-0003
+18:44:05.873 [worker-2] processing order_id=ORD-0004 item_id=ITEM-400 quantity=4
+18:44:05.873 [worker-1] ACK sent for order_id=ORD-0003
+18:44:05.874 [worker-1] received event_id=4914726d-f560-4468-a195-c38d1e327e5a order_id=ORD-0005
+18:44:06.873 [worker-2] processed order_id=ORD-0004
+18:44:06.874 [worker-2] ACK sent for order_id=ORD-0004
+18:44:06.874 [worker-1] processing order_id=ORD-0005 item_id=ITEM-200 quantity=3
+18:44:06.875 [worker-2] received event_id=fb76d564-65be-42e4-b166-5918e748f768 order_id=ORD-0006
+18:44:07.874 [worker-1] processed order_id=ORD-0005
+18:44:07.875 [worker-1] ACK sent for order_id=ORD-0005
+18:44:07.875 [worker-2] processing order_id=ORD-0006 item_id=ITEM-100 quantity=1
+18:44:08.876 [worker-2] processed order_id=ORD-0006
+18:44:08.877 [worker-2] ACK sent for order_id=ORD-0006
